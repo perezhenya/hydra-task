@@ -1,0 +1,565 @@
+$font: Arial,'PT Sans', sans-serif;
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+body{
+    overflow-x: hidden;
+    margin: 0px;
+    background: no-repeat url('../../../img/BG-min.png');
+    background-position: top;
+    background-size: 315%;
+    background-color: #F8F8F8;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    ul {
+    list-style-type: none;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+}
+.contacts__logo img {
+    max-width: 80%;
+    padding: 10px 10px;
+}
+
+nav.contacts__items ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-wrap: wrap; 
+}
+.contacts__menu {
+    display: flex;
+}
+
+address a {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.contacts__email {
+    text-transform: none;
+}
+
+li.contacts__item {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    .contacts__items-pic {
+       margin-right: 13px;
+       max-width: 13px;
+       max-height: 13px;
+       
+      
+    }
+}
+.contacts__menu-nav nav ul {
+    display: none;
+    
+}
+
+button.contacts__home {
+    border: unset;
+    background-color: unset;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.contacts__button {
+    margin-left: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+form button.contacts__en, form button.contacts__de {
+    width: 50px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius:4px;
+    border-style: none;
+    background-color: #1B90A2;
+    p {
+        color: #ffffff;
+        margin: 4px;
+    }
+}
+
+form button.contacts__de  {
+    background-color: #cec9c97e;
+    border-radius: 4px
+}
+
+//burger menu
+.contacts__navigation {
+    margin-top: -60px;
+}
+#menuToggle
+{
+  display: block;
+  position: relative;
+  bottom: 50px;
+  left: 30px;
+  z-index: 1;
+  user-select: none;
+}
+
+#menuToggle a{
+  text-decoration: none;
+  color: #c0b4b4;
+  transition: color 0.3s ease;
+ 
+}
+
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span{
+  display: block;
+  width: 25px;
+  height: 1.7px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #e6e0e0;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #e6e0e0;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: absolute;
+  width: 230px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 100px;
+  background: #a5a1a1f3;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+    padding: 12px  0px 17px;
+    text-transform: uppercase;
+    color: #070707;
+    font-family: $font;
+    font-size: 11px;
+    font-weight: lighter;
+    &:hover{
+        outline: none;
+        border-style: none;
+        cursor: pointer;
+        box-shadow: 2px 6px 8px #dbd4d4de;
+      }
+}
+
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+//online store
+header.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.main-info__nav {
+    display: flex;
+    margin-top: 70px ;
+    
+}
+.main-info h1 {
+    color: #dfd9d9;
+    font-family:$font;
+    font-size: 25px;
+    font-weight: bold;
+    margin:-30px 30px;
+}
+
+  button.main-info-item {
+      width: 100px;
+      height: 35px;
+    padding: 10px;
+    cursor: pointer;
+    border-style: none;
+    margin-left: 60px;
+    background: #1B90A2;
+    border-radius: 4px;
+    p {
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: $font;
+        font-size: 8px;
+        font-weight: normal;
+        font-style: normal;
+    }
+    img.main-info__icon {
+        max-width: 20px;
+    }
+    }
+
+    button.main-info-item {
+    &:hover {
+        background: none;
+        border: 1px solid #1B90A2;
+    }
+}
+button.main-info__item2  {
+    min-width: 100px;
+    height: 35px;
+    background: none;
+    border: 1px solid #1B90A2;
+    cursor: pointer;
+    border-radius:4px;
+    margin-left: 80px;
+    p {
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: $font;
+        font-size: 8px;
+        font-weight: lighter;
+    }
+    &:hover {
+        background-color: #1B90A2;
+    }
+}
+p.main-info__name, img.main-info__icon {
+    display: inline;
+    text-align: center;
+    
+}
+
+//recent arrivals
+section.recent-arrivals {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    // padding: 5px;
+    justify-content: center;
+   
+}
+
+h1.recent-arrivals__header {
+    margin-right: 100px;
+    margin-top: 50px;
+    font-family: $font;
+    font-size: 17px;
+    text-transform: uppercase;
+    color:#131212bb;
+    font-weight: normal;
+}
+h1.recent-arrivals__header2 {
+    margin-left: 50px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    text-transform: uppercase;
+    color: #3B3535;
+}
+
+form button.recent-arrivals__button {
+    cursor: pointer;
+    &:hover {
+         box-shadow: 1px 1px 1000px #2214a1; ;
+    }
+}
+
+article.recent-arrivals__card {
+    margin: 5px;
+    .recent-arrivals__img {
+        max-width: 100%;
+    }
+    .recent-arrivals__heading {
+        font-family: $font;
+        font-size: 16px;
+        color: #ffffffb4;
+        font-weight: lighter;
+        text-align: center;
+        max-width: 150px;
+        margin: 0;
+    }
+    .recent-arrivals__details {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: -120px;
+    }
+    .recent-arrivals__price {
+        font-family: $font;
+        font-size: 16px;
+        color: #ffffffe8;
+        font-weight: bold;
+        
+    }
+    .recent-arrivals__button {
+        width: 90px;
+        border-radius:5px;
+        border-style: none;
+        background-color: rgb(69, 144, 163);
+        p {
+            text-transform: uppercase;
+            color: #ffffff;
+            text-align: center;
+        }
+    }
+}
+.recent-arrivals__img-block {
+    overflow:hidden;
+    max-width: 100%;
+}
+.recent-arrivals__img-block img.recent-arrivals__img{
+    transition: all 1s ease-out;
+    &:hover {
+        transform: scale(1.5);
+    }
+}
+
+//media quieries
+@media screen and (min-width: 380px) {
+    h1.recent-arrivals__header {
+        color: #ffffff;
+    }
+}
+@media screen and (min-width: 410px) {
+    
+    header.main-info {
+        justify-content: center;
+        
+    }
+    body{
+        background-size: 250%;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    body{
+        background-size: 300%;
+    }
+    nav.contacts__items ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+            margin: 5px;
+        }
+}
+.contacts__navigation {
+        margin-top: 30px;
+    }
+    .main-info h1 {
+        font-size: 35px;
+    }
+    h1.recent-arrivals__header {
+        font-size: 20px;
+        color:#ffffff;
+        margin-right: 230px;
+       
+    }
+    body{
+        background-size: 200%;
+    }
+}
+@media screen and (min-width: 800px) {
+    button.main-info-item, button.main-info-item{
+        width: 120px;
+        height: 40px;
+    }
+   
+    .main-info h1 {
+        font-size: 55px;
+    }
+
+    .contacts__navigation {
+        display: none;
+    }
+   
+    h1.recent-arrivals__header {
+        font-size: 26px;
+        color:#ffffff;
+       
+    }
+    body{
+        background-size: 220%;
+    }
+    .contacts__menu-nav nav ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom:90px;
+        a {
+            font-family: $font;
+            font-size: 12px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        li {
+            margin: 20px;
+        } 
+        img.contacts__menu-nav__home {
+            max-width: 15px;
+            max-height: 14px;
+        }
+}
+
+}
+
+@media screen and (min-width: $tablet) {
+    body{
+        background-size: 160%;
+    }
+    .main-info h1 {
+        font-size: 45px;
+        margin-top: -40px;
+    }
+    h1.recent-arrivals__header {
+        font-size: 20px;
+        margin-top: 55px;
+    }
+    button.main-info-item{
+       margin-left: 50px;
+    }
+        
+}
+@media screen and (min-width: $desktop) {
+    address a {
+        font-size: 16px;
+        line-height: 19px;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    .contacts__email {
+        text-transform: none;
+    }
+    form button.contacts__en, form button.contacts__de {
+        width: 55px;
+    }
+    nav.contacts__items ul {
+        margin-left: 260px;
+}
+.contacts__menu-nav nav ul {
+    a {
+        font-family: $font;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    li {
+        margin: 13px;
+    } 
+    img.contacts__menu-nav__home {
+        max-width: 15px;
+        max-height: 14px;
+    }
+}
+.main-info h1 {
+    color: #ffffff;
+    font-family:$font;
+    font-size: 65px;
+    line-height: 65px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    margin:-30px 30px;
+    text-transform: uppercase;
+}
+    h1.recent-arrivals__header {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 43px;
+        text-transform: uppercase;
+        color: #3B3535;
+        margin-right: 700px;
+        margin-top: 150px;
+}
+button.main-info-item{
+    width: 240px;
+    height: 55px;
+    padding: 10px;
+    cursor: pointer;
+    border-style: none;
+    // margin-left: 300px;
+    margin-top: 50px;
+    background: #1B90A2;
+    border-radius: 4px;
+    p {
+        // text-transform: uppercase;
+        color: #ffffff;
+        font-family: $font;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: normal;
+        font-style: normal;
+    }
+    }
+    button.main-info__item2  {
+        margin-top: 50px;
+        padding: 0;
+        background-color: none;
+        border: 1px solid #1B90A2; 
+        width: 240px;
+        height: 55px;
+        cursor: pointer;
+        p {
+            text-transform: uppercase;
+            color: #ffffff;
+            font-family: $font;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: normal;
+            font-style: normal;
+        }
+        &:hover {
+            background: #1B90A2;
+        }
+    }
+
+
+}
